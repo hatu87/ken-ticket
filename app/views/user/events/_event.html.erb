@@ -1,0 +1,11 @@
+<div class="col-md-6">
+  <%= link_to edit_user_event_path(event.id) do %>
+    <div class="card">
+      <img class="card-img-top" src="<%= event.hero_image_url %>">
+      <div class="card-block">
+        <h4 class="card-title"><%= event.name %></h4>
+        <p class="card-text"><%= event.extended_html_description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

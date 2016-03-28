@@ -1,0 +1,41 @@
+<div class="container-fluid tickets-buy">
+  <div class="row tickets-header">
+    <div class="col-xs-12 col-md-11 col-md-offset-1">
+      <h3> <%= @order.user.name %> </h3>
+      <div class="pull-left">
+        <%= fa_icon 'map-marker' %>
+      </div>
+      <div class="venue-details">
+
+       <br/>
+
+      </div>
+
+      <div class="pull-left">
+        <%= fa_icon 'clock-o' %>
+      </div>
+      <div class="time-details">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1">
+      <table class="table">
+        <th> Ticket Type </th>
+        <th> Unit Price </th>
+        <th> Quantity </th>
+
+        <% @order.order_items.each do |item| %>
+        <tr>
+          <td> <%= item.ticket_type.name %> </td>
+          <td> <%= number_to_currency(item.price, unit: 'VND ', precision: 0) %> </td>
+          <td>
+            <%= item.quantity %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+

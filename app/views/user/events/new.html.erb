@@ -1,0 +1,16 @@
+  <div class="container-fluid tickets-buy">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="display-4">Create Event</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <%= render partial: 'form', locals: {url: user_events_path, method: :post, is_edit: false} %>
+      </div>
+      <div class="col-md-6">
+
+      </div>
+    </div>
+  </div>
