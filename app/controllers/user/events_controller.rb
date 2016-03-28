@@ -32,7 +32,7 @@ class User::EventsController < User::UserApplicationController
     event = Event.find_by(id: params[:id])
 
     event.published = true
-    binding.pry
+    # binding.pry
     if event.save
       flash[:success] = 'Publish successfully'
       redirect_to action: :edit, id: event.id

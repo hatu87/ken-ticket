@@ -1,6 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
+OrderItem.delete_all
+Order.delete_all
 TicketType.delete_all
 Event.delete_all
 Category.delete_all
@@ -31,6 +33,7 @@ e = Event.create({
   starts_at: DateTime.now + 1,
   ends_at: DateTime.now + 2,
   venue: dalat,
+  published: true,
   category: Category.find_by(name: 'Everything Else'),
   hero_image_url: 'https://az810747.vo.msecnd.net/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter',
   extended_html_description: <<-DESC
@@ -57,9 +60,10 @@ dan_venue = Venue.create({
 e = Event.create({
   name: 'Cảm ơn Đời - Live Concert Đan Trường',
   venue: dan_venue,
+  published: true,
   category: Category.find_by(name: 'Entertainment'),
-  starts_at: DateTime.parse('Sat, 16 Jan 2016, 8:00 PM+0700'),
-  ends_at: DateTime.parse('Sat, 16 Jan 2016, 10:30 PM+0700'),
+  starts_at: DateTime.now + 1,
+  ends_at: DateTime.now + 2,
   hero_image_url: 'https://az810747.vo.msecnd.net/eventcover/2015/12/11/C68636.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter',
   extended_html_description: <<-DESC
   <p style="text-align:justify"> </p>
@@ -139,9 +143,10 @@ gap = Venue.create({
 
 e = Event.create({
   name: 'Merry Christmas Never Alone',
-  starts_at: DateTime.parse('Thu, 24 Dec 2015, 8:00 PM+0700'),
-  ends_at: DateTime.parse('Thu, 24 Dec 2015, 11:00 PM+0700'),
+  starts_at: DateTime.now + 1,
+  ends_at: DateTime.now + 2,
   venue: gap,
+  published: true,
   category: Category.find_by(name: 'Entertainment'),
   hero_image_url:'https://az810747.vo.msecnd.net/eventcover/2015/12/12/78534E.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter',
   extended_html_description: <<-DESC
