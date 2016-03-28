@@ -4,9 +4,9 @@
 
 Submitted by: **Tu Hoang**
 
-Time spent: **X** hours
+Time spent: **10** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://ken-ticket.herokuapp.com**
 
 SimpleCov Test Coverage: **Insert percentage or link to report here**
 
@@ -14,7 +14,7 @@ SimpleCov Test Coverage: **Insert percentage or link to report here**
 
 The following **required** functionality is complete:
 
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 #### Events
 
