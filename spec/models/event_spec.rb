@@ -1,6 +1,40 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
+  describe '.published' do
+    it 'should return an empty array if there are no events' do
+      expect(Event.published).to eq([])
+    end
+
+    it 'should return an empty array if there are no published events' do
+      venue = FactoryGirl.create(:venue)
+      category = FactoryGirl.create(:category)
+
+      FactoryGirl.create(:event, name: 'event 2', starts_at: DateTime.now + 1,
+                                 venue: venue,
+                                 category: category,
+                                 published: false)
+
+      expect(Event.published).to eq([])
+    end
+
+    it 'should return an array of published array' do
+      venue = FactoryGirl.create(:venue)
+      category = FactoryGirl.create(:category)
+
+      FactoryGirl.create(:event, name: 'event 1', starts_at: DateTime.now + 1,
+                                 venue: venue,
+                                 category: category,
+                                 published: false)
+
+      event = FactoryGirl.create(:event, name: 'event 2', starts_at: DateTime.now + 1,
+                                 venue: venue,
+                                 category: category,
+                                 published: true)
+
+      expect(Event.published).to eq([event])
+    end
+  end
 
   describe '.upcoming' do
     it 'should be empty if there are no event' do

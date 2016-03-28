@@ -4,6 +4,7 @@ FactoryGirl.define do
     hero_image_url 'https://az810747.vo.msecnd.net/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter'
     starts_at DateTime.now
     ends_at DateTime.now + 1
+    published true
     extended_html_description <<-DESC
       <p style="text-align:center"><span style="font-size:20px">VIỆT NAM THỬ THÁCH CHIẾN THẮNG 2016</span></p>
       <p style="text-align:center"><span style="font-size:20px">Giải đua xe đạp địa hình 11-13/03/2016</span></p>

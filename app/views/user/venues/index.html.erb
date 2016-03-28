@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <h2 class="display-4">Venues</h2>
-      <%= render partial: 'venue', collection: @venues %>
+      <%= render(partial: 'venue', collection: @venues) || 'No venues' %>
     </div>
   </div>
 </div>
