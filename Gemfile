@@ -38,6 +38,7 @@ gem 'omniauth-facebook'
 gem 'react-rails'
 gem 'active_model_serializers'
 gem 'devise'
+gem 'coveralls', require: false
 # Use Unicorn as the app server
 # gem 'unicorn'
 
