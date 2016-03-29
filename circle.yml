@@ -3,3 +3,6 @@ deployment:
     branch: master
     heroku:
       appname: ken-ticket
+machine:
+  ruby:
+    version: 2.3.0
