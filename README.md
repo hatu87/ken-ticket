@@ -8,7 +8,7 @@ Time spent: **10** hours
 
 URL: **https://ken-ticket.herokuapp.com**
 
-SimpleCov Test Coverage: **Insert percentage or link to report here**
+SimpleCov Test Coverage: **!https://coveralls.io/repos/github/hatu87/ken-ticket/badge.svg?branch=master(Coverage Status)!:https://coveralls.io/github/hatu87/ken-ticket?branch=master**
 
 ## User Stories
 
