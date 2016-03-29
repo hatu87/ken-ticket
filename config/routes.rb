@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/auth/:provider/callback" => "authentications#create"
+
   namespace :user do
     resources :events do
       member do
