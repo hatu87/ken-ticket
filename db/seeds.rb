@@ -8,6 +8,7 @@ Event.delete_all
 Category.delete_all
 Venue.delete_all
 Region.delete_all
+SocialAccount.delete_all
 User.delete_all
 
 # Create Regions

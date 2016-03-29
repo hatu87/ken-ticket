@@ -5,9 +5,9 @@ class AuthenticationsController < ApplicationController
 
     if user = User.from_omniauth(env["omniauth.auth"])
       # log in user here
-      # binding.pry
+      binding.pry
       # current_user = user
-      sign_in user
+      sign_in :user, user
       redirect_to root_path
     else
       # don't log user in

@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
       end
       # binding.pry
       existed_user.social_accounts.create(uid: auth[:uid], provider: auth[:provider])
-
+      existed_user
       # existed_user && existed_user.accounts.create(uid: auth[:uid], provider: auth[:provider]).user
     else
       # facebook account is existed
